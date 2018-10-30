@@ -21,16 +21,23 @@ DEVICE_PATH := device/xiaomi/land
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common pixys stuff
+$(call inherit-product, vendor/pixys/config/common_full_phone.mk)
 
 # Inherit from land device
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
-PRODUCT_BRAND := Xiaomi
+# Boot animation
+TARGET_BOOT_ANIMATION_RES := 720
+
+
+## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := land
-PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := lineage_land
+PRODUCT_NAME := pixys_land
+PRODUCT_MODEL := Redmi 3S
+PRODUCT_BRAND := xiaomi
+PRODUCT_MANUFACTURER := xiaomi
+PRODUCT_RELEASE_NAME := land
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
@@ -44,3 +51,6 @@ BUILD_FINGERPRINT := "Xiaomi/land/land:6.0.1/MMB29M/V9.6.1.0.MALMIFD:user/releas
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.product.model
+    
+PRODUCT_GENERIC_PROPERTIES += \
+    ro.sf.lcd_density=320
