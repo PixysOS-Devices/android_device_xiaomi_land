@@ -1,1 +1,3 @@
-add_lunch_combo dot_land-userdebug
+add_lunch_combo pixys_land-eng
+add_lunch_combo pixys_land-user
+add_lunch_combo pixys_land-userdebug
