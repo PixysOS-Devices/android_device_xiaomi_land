@@ -1,0 +1,11 @@
+[
+  {
+    "repository": "android_kernel_xiaomi_msm8937",
+    "target_path": "kernel/xiaomi/msm8937"
+  },
+   {
+    "repository": "android_vendor_land",
+    "target_path": "vendor/xiaomi"
+  },
+  
+]
