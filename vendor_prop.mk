@@ -52,7 +52,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.is_type=1 \
     persist.ts.postmakeup=true \
     persist.ts.rtmakeup=true \
-    persist.vendor.qti.telephony.vt_cam_interface=1
+    persist.vendor.qti.telephony.vt_cam_interface=1 \
+    persist.camera.HAL3.enabled=1
+    
 
 # CNE/DPM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -121,7 +123,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.enc.narrow.searchrange=1 \
     vendor.vidc.disable.split.mode=1 \
     vendor.video.disable.ubwc=1 \
-    media.settings.xml=/vendor/etc/media_profiles_V1_0.xml
+    media.settings.xml=/vendor/etc/media_profiles_V1_0.xml \
+    qemu.hw.mainkeys=0
 
 # Netmgrd
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -209,3 +212,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # UI
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.use_fifo_ui=1
+    
